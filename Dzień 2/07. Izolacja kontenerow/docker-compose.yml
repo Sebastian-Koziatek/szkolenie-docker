@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ubuntu:
+    container_name: ubuntunet1
+    image: ubuntu
+    restart: on-failure
+    command: ["sleep","infinity"]
+  ubuntu2:
+    container_name: ubuntunet2
+    image: ubuntu
+    restart: on-failure
+    command: ["sleep","infinity"]

@@ -1,0 +1,13 @@
+services:
+  volumes-example-service:
+    image: alpine:latest
+    volumes: 
+      - my-named-global-volume:/my-volumes/named-global-volume
+      - /tmp:/my-volumes/host-volume
+      - /home:/my-volumes/readonly-host-volume:ro
+  another-volumes-example-service:
+    image: alpine:latest
+    volumes:
+      - my-named-global-volume:/another-path/the-same-named-global-volume
+volumes:
+  my-named-global-volume: 

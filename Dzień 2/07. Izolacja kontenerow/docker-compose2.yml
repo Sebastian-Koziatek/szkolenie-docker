@@ -1,0 +1,22 @@
+version: "3"
+services:
+  ubuntu:
+    container_name: ubuntunet1
+    image: ubuntu
+    restart: on-failure
+    command: ["sleep","infinity"]
+    networks:
+      - net1
+  ubuntu2:
+    container_name: ubuntunet2
+    image: ubuntu
+    restart: on-failure
+    command: ["sleep","infinity"]
+    networks:
+      - net1
+
+networks:
+    net1:
+      driver: my-bridge-network
+    net2:
+      driver: bridge

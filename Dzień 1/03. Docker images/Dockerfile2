@@ -1,0 +1,4 @@
+FROM alpine
+LABEL imagetype="szkolenie"
+ENTRYPOINT ["/bin/echo", "Hello"]
+CMD ["world"]

@@ -1,0 +1,12 @@
+#FROM definiuje obraz bazowy którego użyjemy do budowania naszego obrazu.
+FROM debian
+
+#RUN jest to instrukcja wykonywania poleceń w systemie plików kontenera.
+RUN apt-get update
+RUN apt-get install -y mc
+
+#LABEL określa etykiete którą chcemy przypisać do naszego obrazu. 
+LABEL imagetype="szkolenie"
+
+#CMD zawiera polecenie które zostanie wykonane po starcie kontenera z obrazu. 
+CMD mc
